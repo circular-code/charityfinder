@@ -54,6 +54,7 @@ body {
     height: 150px;
     border-radius: 100px;
     border: 2px solid #44E073;
+    background: #44E073;
 }
 
 #logo > img {
