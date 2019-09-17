@@ -29,7 +29,6 @@ $(document).ready(function() {
     }).dxTextBox("instance");
 
     $('#go').on('click', function() {
-
         var region = regionInput.option('value') || "";
         var category = categoryInput.option('value') || "";
         var search = searchInput.option('value') || "";
