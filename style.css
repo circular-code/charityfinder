@@ -135,3 +135,36 @@ body {
 .dx-texteditor.dx-state-focused:before, .dx-texteditor.dx-state-active:before {
     border-bottom: 2px solid #44E073;
 }
+
+.category-wrapper {
+    max-height: 500px;
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.category {
+    text-align: center;
+    min-width: 150px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 20px 20px 0;
+    cursor: pointer;
+}
+
+.category img {
+    width: 64px;
+    height: 64px;
+}
+
+.category h3 {
+    font-weight: bold;
+    font-size: 15px;
+    color: #333;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.category:hover {
+    background: #eaeaea;
+}
