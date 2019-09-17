@@ -1,20 +1,20 @@
 $(document).ready(function() {
 
     var regionInput = $("#region").dxSelectBox({
-        dataSource: ["Germany","England","Greece"],
+        dataSource: ["everywhere", "europe", "asia", "north-america", "south-america", "australia", "africa", "germany", "england", "greece"],
         stylingMode: "filled",
         width: "200px",
         showClearButton: true,
-        value: "Germany",
+        value: "germany",
         placeholder: "..."
     }).dxSelectBox("instance");
 
     var categoryInput = $("#category").dxSelectBox({
-        dataSource: ["All","Health","Animals"],
+        dataSource: ["animals", "alcohol", "drugs", "culture", "community", "disabled", "family", "youth", "kids", "sport", "violence", "education", "environment", "health", "people", "old age", "unemployment", "rights", "religion", "research"],
         stylingMode: "filled",
         width: "200px",
         showClearButton: true,
-        value: "Health",
+        value: "animals",
         placeholder: "..."
     }).dxSelectBox("instance");
 
@@ -28,11 +28,25 @@ $(document).ready(function() {
         }
     }).dxTextBox("instance");
 
-    $('#go').on('click', function() {
+    $('#go').on('click', search);
+
+    function search () {
         var region = regionInput.option('value') || "";
         var category = categoryInput.option('value') || "";
         var search = searchInput.option('value') || "";
 
-        window.location.href = "data?region=" + region + "&category=" + category + "&search=" + search;
-    });
+        var href = "data?";
+
+        if (region)
+            href += "region=" + region + "&";
+
+        if (category)
+            href += "category=" + category + "&";
+
+        if (search)
+            href += "search=" + search + "&";
+
+        window.location.href = href;
+    }
 });
+

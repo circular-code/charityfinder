@@ -2,7 +2,7 @@ var qs = parseQueryString(window.location.search.substring(1));
 
 $(document).ready(function() {
 
-    // var ready = true;
+    var ready = true;
 
     $('#charitiesGrid').dxDataGrid({
         sorting: {
@@ -38,22 +38,12 @@ $(document).ready(function() {
         showBorders: true,
         allowColumnResizing: true,
         allowColumnReordering: true,
-        // stateStoring: {
-        //     enabled: true,
-        //     type: 'localStorage',
-        //     storageKey: 'charitylist',
-        //     savingTimeout: 1000
-        // },
-        export: {
-            enabled: true,
-            fileName: 'my-charities-' + Date.now(),
+        onContentReady: function(e) {
+            if (ready) {
+               e.component.searchByText(qs.search);
+               ready = false;
+            }
         },
-        // onContentReady: function(e) {
-        //     if (ready) {
-        //        applyFilters(e.component);
-        //        ready = false;
-        //     }
-        // },
         dataSource: data,
         columns: [
         {
@@ -61,27 +51,29 @@ $(document).ready(function() {
             dataField: "region",
             dataType: "string",
             selectedFilterOperation: "=",
-            filterValue: qs.region
+            filterValue: qs.region,
         },
         {
             caption: "name",
             dataField: "name",
             dataType: "string",
-            selectedFilterOperation: "contains",
-            filterValue: qs.search
+            allowSearch: true,
         }, {
             caption: "category",
             dataField: "category",
             dataType: "string",
             selectedFilterOperation: "=",
-            filterValue: qs.category
+            filterValue: qs.category,
+            allowSearch: true
         }, {
-            caption: "themes",
-            dataField: "themes",
+            caption: "tags",
+            dataField: "tags",
             dataType: "object",
-            cellTemplate: function(n) {
-                return 'test';
-            }
+            cellTemplate: function(content, info) {
+                $(content).append(info.data.tags.join(', '));
+                return content;
+            },
+            allowSearch: true
         }, {
             caption: "link",
             dataField: "link",
@@ -89,7 +81,8 @@ $(document).ready(function() {
             cellTemplate: function(content, info) {
                 $(content).append($('<a target="_blank "href="' + info.data.link + '">' + info.data.link + '</a> '));
                 return content;
-            }
+            },
+            allowSearch: true,
         }],
     }).dxDataGrid('instance');
 });
@@ -118,17 +111,17 @@ function parseQueryString (query) {
 
 var data = [
     {
-        region: "Germany",
+        region: "germany",
         name: "DRK",
         category: "health",
-        themes: ["a", "b", "c"],
+        tags: ["a", "b", "c"],
         link: "https://www.google.de"
     },
     {
-        region: "USA",
+        region: "germany",
         name: "NationalAnimals",
         category: "animals",
-        themes: ["a", "b", "c"],
+        tags: ["a", "b", "c"],
         link: "https://www.google.de"
     }
 ];
