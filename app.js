@@ -66,7 +66,8 @@ $(document).ready(function() {
                     }       
                 },
                 onClick: function (e) {
-                    console.log(e.target.attribute().CONTINENT);
+                    if (e.target)
+                        console.log(e.target.attribute().CONTINENT);
                 },
                 tooltip: {
                     enabled: true,
