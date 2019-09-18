@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    var regions = ["everywhere", "europe", "asia", "north-america", "south-america", "australia", "africa", "germany", "england", "greece"];
+    var regions = ["everywhere", "europe", "asia", "northamerica", "southamerica", "australia", "africa", "germany", "england", "greece"];
     var categories = ["animals", "alcohol", "drugs", "culture", "community", "disabled", "family", "youth", "kids", "sport", "violence", "education", "environment", "health", "old age", "unemployment", "rights", "religion", "research"];
 
     var regionInput = $("#region").dxSelectBox({
@@ -50,6 +50,7 @@ $(document).ready(function() {
                 layers: {
                     name: "areas",
                     dataSource: world,
+                    // dataSource: DevExpress.viz.map.sources.eurasia, 
                     colorGroups: [0, 10000, 50000, 100000, 500000, 1000000, 10000000, 50000000],
                     colorGroupingField: "total",
                     label: {
@@ -66,8 +67,14 @@ $(document).ready(function() {
                     }       
                 },
                 onClick: function (e) {
-                    if (e.target)
-                        console.log(e.target.attribute().CONTINENT);
+                    if (e.target) {
+                        var continent = e.target.attribute().CONTINENT;
+                        regionInput.option('value', continent);
+
+                        switch(continent) {
+                            
+                        }
+                    }
                 },
                 tooltip: {
                     enabled: true,
