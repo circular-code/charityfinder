@@ -40,17 +40,55 @@ $(document).ready(function() {
     }).dxTextBox("instance");
 
     var regionPopup = $('#regionPopup').dxPopup({
-        title: 'Region wählen',
+        title: 'Choose a region',
         contentTemplate: function() {
 
-            var container = $('<div>Test</div>');
+            var container = $('<div></div>');
+            container.addClass('region-wrapper');
+
+            var worldmap = $("<div>").dxVectorMap({
+                layers: {
+                    name: "areas",
+                    dataSource: world,
+                    colorGroups: [0, 10000, 50000, 100000, 500000, 1000000, 10000000, 50000000],
+                    colorGroupingField: "total",
+                    label: {
+                        enabled: true,
+                        dataField: "name"
+                    },
+                    customize: function (elements) {
+                        $.each(elements, function (_, element) {
+                            element.applySettings({
+                                hoveredColor: "#44E073",
+                                selectedColor: "#44E073"
+                            });
+                        });
+                    }       
+                },
+                onClick: function (e) {
+                    console.log(e.target.attribute().CONTINENT);
+                },
+                tooltip: {
+                    enabled: true,
+                    border: {
+                        visible: false
+                    },
+                    font: { color: "#fff" },
+                    customizeTooltip: function (arg) {
+                        return {color: '#333333' };
+                    }
+                },
+                // bounds: [-180, 85, 180, -60]
+            });
+
+            container.append(worldmap);
 
             return container;
         },
         dragEnabled: false,
         closeOnOutsideClick: true,
-        height: '500px',
-        width: '100%',
+        height: '70%',
+        width: '70%',
         animation: {
             show: { type: 'slide', from: { opacity: 1, top: -$(window).height() }, to: { top: 50 } },
             hide: { type: 'slide', from: { top: 50 }, to: { top: -$(window).height() } }
@@ -58,7 +96,7 @@ $(document).ready(function() {
     }).dxPopup('instance');
 
     var categoryPopup = $('#categoryPopup').dxPopup({
-        title: 'Kategorie wählen',
+        title: 'Choose a category',
         contentTemplate: function() {
 
             var container = $('<div></div>');
@@ -121,3 +159,8 @@ $(document).ready(function() {
     }
 });
 
+{/* <script src="https://cdn3.devexpress.com/jslib/19.1.6/js/vectormap-data/africa.js"></script>
+<script src="https://cdn3.devexpress.com/jslib/19.1.6/js/vectormap-data/canada.js"></script>
+<script src="https://cdn3.devexpress.com/jslib/19.1.6/js/vectormap-data/eurasia.js"></script>
+<script src="https://cdn3.devexpress.com/jslib/19.1.6/js/vectormap-data/europe.js"></script>
+<script src="https://cdn3.devexpress.com/jslib/19.1.6/js/vectormap-data/usa.js"></script> */}
