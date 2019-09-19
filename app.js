@@ -1,3 +1,4 @@
+var continents = {};
 $(document).ready(function() {
 
     var regions = ["everywhere", "europe", "asia", "northamerica", "southamerica", "australia", "africa", "germany", "england", "greece"];
@@ -71,9 +72,11 @@ $(document).ready(function() {
                         var continent = e.target.attribute().CONTINENT;
                         regionInput.option('value', continent);
 
-                        switch(continent) {
-                            
-                        }
+                        $.getScript(continent + ".js").done(function(res){
+                            console.log("done", res)
+                            e.component.option('dataSource', continents[continent]);
+                            e.component.render();
+                        }).fail(function(res){console.log("fail", res)})
                     }
                 },
                 tooltip: {
@@ -168,7 +171,8 @@ $(document).ready(function() {
 });
 
 {/* <script src="https://cdn3.devexpress.com/jslib/19.1.6/js/vectormap-data/africa.js"></script>
+<script src="https://cdn3.devexpress.com/jslib/19.1.6/js/vectormap-data/europe.js"></script>
+
 <script src="https://cdn3.devexpress.com/jslib/19.1.6/js/vectormap-data/canada.js"></script>
 <script src="https://cdn3.devexpress.com/jslib/19.1.6/js/vectormap-data/eurasia.js"></script>
-<script src="https://cdn3.devexpress.com/jslib/19.1.6/js/vectormap-data/europe.js"></script>
 <script src="https://cdn3.devexpress.com/jslib/19.1.6/js/vectormap-data/usa.js"></script> */}
