@@ -10,7 +10,7 @@ $(document).ready(function() {
         width: "200px",
         showClearButton: true,
         value: "germany",
-        placeholder: "...",
+        placeholder: "everywhere",
         openOnFieldClick: false,
         onFocusIn: function(e) {
             regionPopup.show();
@@ -23,7 +23,7 @@ $(document).ready(function() {
         width: "200px",
         showClearButton: true,
         value: "animals",
-        placeholder: "...",
+        placeholder: "any",
         openOnFieldClick: false,
         onFocusIn: function(e) {
             categoryPopup.show();
@@ -33,7 +33,7 @@ $(document).ready(function() {
     var searchInput = $("#searchInput").dxTextBox({
         showClearButton: true,
         stylingMode: "filled",
-        placeholder: "...",
+        placeholder: "your searchterm",
         width: "200px",
         onKeyDown: function(n) {
             n.event.key === "Enter" && console.log('test');
@@ -69,14 +69,7 @@ $(document).ready(function() {
                 },
                 onClick: function (e) {
                     if (e.target) {
-                        var continent = e.target.attribute().CONTINENT;
-                        regionInput.option('value', continent);
-
-                        $.getScript(continent + ".js").done(function(res){
-                            console.log("done", res)
-                            e.component.option('dataSource', continents[continent]);
-                            e.component.render();
-                        }).fail(function(res){console.log("fail", res)})
+                        handleMapSelection(e);
                     }
                 },
                 tooltip: {
@@ -165,8 +158,92 @@ $(document).ready(function() {
 
         container.append(img);
         container.append(title);
+        container.on('click', function() {
+            categoryInput.option('value', category);
+            categoryPopup.hide();
+        });
 
         return container;
+    }
+
+    function handleMapSelection (e) {
+        var continent = e.target.attribute().CONTINENT;
+        if (continent) {
+            regionInput.option('value', continent.toLowerCase());
+
+            if (!continents[continent]) {
+                $.getScript(continent.toLowerCase() + ".js").done(function(){
+                    var layers = {
+                        name: "areas",
+                        dataSource: continents[continent],
+                        colorGroups: [0, 10000, 50000, 100000, 500000, 1000000, 10000000, 50000000],
+                        colorGroupingField: "total",
+                        label: {
+                            enabled: true,
+                            dataField: "name"
+                        },
+                        customize: function (elements) {
+                            $.each(elements, function (_, element) {
+                                element.applySettings({
+                                    hoveredColor: "#44E073",
+                                    selectedColor: "#44E073"
+                                });
+                            });
+                        } 
+                    };
+                    e.component.option('layers', layers);
+                    e.component.render();
+                });
+            }
+            else {
+                var layers = {
+                    name: "areas",
+                    dataSource: continents[continent],
+                    colorGroups: [0, 10000, 50000, 100000, 500000, 1000000, 10000000, 50000000],
+                    colorGroupingField: "total",
+                    label: {
+                        enabled: true,
+                        dataField: "name"
+                    },
+                    customize: function (elements) {
+                        $.each(elements, function (_, element) {
+                            element.applySettings({
+                                hoveredColor: "#44E073",
+                                selectedColor: "#44E073"
+                            });
+                        });
+                    } 
+                };
+                e.component.option('layers', layers);
+                e.component.render();
+            }
+        }
+        else {
+            regionInput.option('value', e.target.attribute().name.toLowerCase());
+
+            var layers = {
+                name: "areas",
+                dataSource: world,
+                // dataSource: DevExpress.viz.map.sources.eurasia, 
+                colorGroups: [0, 10000, 50000, 100000, 500000, 1000000, 10000000, 50000000],
+                colorGroupingField: "total",
+                label: {
+                    enabled: true,
+                    dataField: "name"
+                },
+                customize: function (elements) {
+                    $.each(elements, function (_, element) {
+                        element.applySettings({
+                            hoveredColor: "#44E073",
+                            selectedColor: "#44E073"
+                        });
+                    });
+                }
+            };
+            e.component.option('layers', layers);
+            regionPopup.hide();
+            e.component.render();
+        }
     }
 });
 
