@@ -95,9 +95,10 @@
         <script>
         function myFunction() {
             if (navigator.userAgent.indexOf("MSIE ") > 0 || navigator.userAgent.indexOf("Trident") > 0 || navigator.userAgent.indexOf("Edge") > 0){
+                 var divToPrint = document.getElementById('printArea');
                  var newWin = window.open();
-                 newWin.document.write(document.body);
-                 newWin.print();  
+                 newWin.document.write(divToPrint);
+                 newWin.print();
             }
             else
                 window.print();
