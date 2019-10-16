@@ -91,12 +91,18 @@
             </svg>
         </div>
         <button onclick="myFunction()">Print this page</button>
-        <a target="_blank" href="https://www.google.de">google<a/>
+        <a target="_blank" href="https://www.google.de">neuer tab<a/>
         <script>
         function myFunction() {
           window.print();
         }
         </script>
+        <a href="print.html"  
+            onclick="window.open('print.html', 
+                                 'newwindow', 
+                                 'width=300,height=250'); 
+                      return false;"
+         >neues Fenster</a>
         <div id="searchContainer">
             <div class="main-headline">
                 <span>find</span>
