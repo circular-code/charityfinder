@@ -97,8 +97,7 @@
             if (navigator.userAgent.indexOf("MSIE ") > 0 || navigator.userAgent.indexOf("Trident") > 0 || navigator.userAgent.indexOf("Edge") > 0){
                  var newWin = window.open();
                  newWin.document.write(document.body);
-                 newWin.print();
-                 newWin.close();   
+                 newWin.print();  
             }
             else
                 window.print();
