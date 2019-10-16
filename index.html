@@ -94,7 +94,14 @@
         <a target="_blank" href="https://www.google.de">neuer tab<a/>
         <script>
         function myFunction() {
-          window.print();
+            if (navigator.userAgent.indexOf("MSIE ") > 0 || navigator.userAgent.indexOf("Trident") > 0 || navigator.userAgent.indexOf("Edge") > 0){
+                 var newWin = window.open();
+                 newWin.document.write(document.body);
+                 newWin.print();
+                 newWin.close();   
+            }
+            else
+                window.print();
         }
         </script>
         <a href="https://www.google.de"  
