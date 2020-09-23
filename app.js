@@ -59,7 +59,7 @@ $(document).ready(function() {
       ]
     var categories = ["animals", "alcohol", "drugs", "culture", "community", "disabled", "family", "youth", "kids", "sport", "violence", "education", "environment", "health", "old age", "unemployment", "rights", "religion", "research"];
 
-    var regionInput = $("#region").dxDropDownBox({
+    var regionInput = $("#regionInput").dxDropDownBox({
         stylingMode: "filled",
         dataSource: regions,
         selectByClick: true,
@@ -103,7 +103,7 @@ $(document).ready(function() {
         }
     }).dxDropDownBox('instance');
 
-    var categoryInput = $("#category").dxSelectBox({
+    var categoryInput = $("#categoryInput").dxSelectBox({
         dataSource: categories,
         stylingMode: "filled",
         width: "200px",

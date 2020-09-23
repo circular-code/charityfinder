@@ -5,29 +5,21 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-#logo {
-    width: 150px;
-    height: 150px;
-    border-radius: 100px;
-    background: #44E073;
-}
-
-#logo > svg {
-    width: 90px;
-    top: 50%;
-    left: 50%;
-    transform: translate(33px, 48px);
-}
-
-#logo > svg .st2 {
-    fill: white;
-}
-
 .main-headline img {
     width: 85px;
     opacity: 0.6;
     position: relative;
     top: 12px;
+}
+
+#logo {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-left: 211px;
+    margin-bottom: 60px;
+    margin-top: 50px;
+    color: #44e073;
+    text-decoration: underline;
 }
 
 .main-headline {
@@ -45,7 +37,7 @@ body {
     background: #44E073;
     outline: unset;
     border: none;
-    padding: 25px 100px;
+    padding: 15px 102px;
     border-radius: 82px;
     font-size: 23px;
     font-weight: bold;
@@ -54,6 +46,10 @@ body {
     margin-left: 20px;
     transition: background-color 0.5s ease-in-out;
     cursor: pointer;
+    width: 400px;
+    position: relative;
+    margin-top: 20px;
+    left: 210px;
 }
 
 #go:hover {
@@ -62,14 +58,6 @@ body {
 
 #search {
     margin-top: 20px;
-}
-
-#searchField {
-    width: auto;
-    border: 1px solid gray;
-    border-radius: 46px;
-    display: flex;
-    padding: 0px 31px;
 }
 
 #searchField > div {
@@ -127,4 +115,27 @@ body {
 
 #region input {
     cursor: pointer;
+}
+
+.search-pair {
+    margin: 1rem 0rem;
+    padding: 1rem 1rem 1rem 0;
+    display: flex;
+    position: relative;
+}
+
+.search-pair-description {
+    width: 230px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.search-pair-description + div {
+    border-bottom: 1px solid gray;
+    width: 400px!important;
+}
+
+.dx-checkbox-indeterminate .dx-checkbox-icon,
+.dx-checkbox-checked .dx-checkbox-icon {
+    background-color:#44e073;
 }
