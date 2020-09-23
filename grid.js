@@ -8,10 +8,14 @@ $(document).ready(function() {
         sorting: {
             mode: 'multiple'
         },
-        filterRow: {
+        // filterRow: {
+        //     visible: true,
+        //     applyFilter: 'auto'
+        // },
+        headerFilter: {
             visible: true,
-            applyFilter: 'auto'
         },
+        allowHeaderFiltering: true,
         paging: {
             enabled: true
         },
@@ -50,8 +54,7 @@ $(document).ready(function() {
             caption: "region",
             dataField: "region",
             dataType: "string",
-            selectedFilterOperation: "=",
-            filterValue: qs.region,
+            filterValues: qs.region.split(','),
         },
         {
             caption: "name",

@@ -1,15 +1,22 @@
 var data = [
     {
-        region: "germany",
+        region: "Germany",
         name: "DRK",
         category: "health",
         tags: ["a", "b", "c"],
         link: "https://www.google.de"
     },
     {
-        region: "germany",
+        region: "Greece",
         name: "NationalAnimals",
-        category: "animals",
+        category: "health",
+        tags: ["a", "b", "c"],
+        link: "https://www.google.de"
+    },
+    {
+        region: "Italy",
+        name: "NationalAnimals2",
+        category: "health",
         tags: ["a", "b", "c"],
         link: "https://www.google.de"
     }
