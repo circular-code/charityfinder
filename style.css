@@ -49,7 +49,7 @@ body {
     width: 400px;
     position: relative;
     margin-top: 20px;
-    left: 210px;
+    left: 248px;
 }
 
 #go:hover {
@@ -125,9 +125,10 @@ body {
 }
 
 .search-pair-description {
-    width: 230px;
+    width: 180px;
     margin-top: 20px;
     font-weight: bold;
+    margin-left: 84px;
 }
 
 .search-pair-description + div {
@@ -138,4 +139,19 @@ body {
 .dx-checkbox-indeterminate .dx-checkbox-icon,
 .dx-checkbox-checked .dx-checkbox-icon {
     background-color:#44e073;
+}
+
+.search-pair-description i, .search-pair-description h3 {
+    display: inline-block;
+}
+
+.search-pair-description i {
+    background: #44e073;
+    color: white;
+    border-radius: 50px;
+    margin-right: 10px;
+    padding: 20px 25px;
+    font-size: 1.5rem;
+    position: absolute;
+    transform: translate(-81px, -24px);
 }
