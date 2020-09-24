@@ -8,7 +8,7 @@
 
 var data = [
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"action medeor - Deutsches Medikamenten-Hilfswerk e. V.",
        "categories":[
           "poverty",
@@ -19,7 +19,7 @@ var data = [
        "link":"www.medeor.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"AGAPEDIA Stiftung für Kinder, Soziales und Bildung gGmbH",
        "categories":[
           "poverty",
@@ -33,7 +33,7 @@ var data = [
        "link":"www.agapedia.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Aktion Kulturland Gemeinnützige Stiftung für Landwirtschaft und Ökologie",
        "categories":[
           "culture",
@@ -44,7 +44,7 @@ var data = [
        "link":"www.aktion-kulturland.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Aktion Sonnenschein - Hilfe für das mehrfach behinderte Kind",
        "categories":[
           "disabled",
@@ -55,7 +55,7 @@ var data = [
        "link":"www.aktionsonnenschein.com"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Albert-Schweitzer-Kinderdorf Hessen e.V.",
        "categories":[
           "family",
@@ -66,7 +66,7 @@ var data = [
        "link":"www.ask-hessen.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Albert-Schweitzer-Kinderdörfer und Familienwerke e.V. Bundesverband",
        "categories":[
           "old age",
@@ -78,7 +78,7 @@ var data = [
        "link":"www.albert-schweitzer-verband.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Alzheimer Forschung Initiative e.V.",
        "categories":[
           "old age",
@@ -88,7 +88,7 @@ var data = [
        "link":"www.alzheimer-forschung.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Amnesty International Deutschland e.V.",
        "categories":[
           "developing countries",
@@ -100,7 +100,7 @@ var data = [
        "link":"www.amnesty.de/testament"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"AMSEL, Aktion Multiple Sklerose Erkrankter Landesverband der DMSG in Baden-Württemberg e.V.",
        "categories":[
           "disabled",
@@ -111,7 +111,7 @@ var data = [
        "link":"www.amsel.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"ANDHERI HILFE e.V.",
        "categories":[
           "poverty",
@@ -123,7 +123,7 @@ var data = [
        "link":"www.andheri-hilfe.org"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Animals' Angels e.V.",
        "categories":[
           "animals"
@@ -131,7 +131,7 @@ var data = [
        "link":"www.animals-angels.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Ärzte ohne Grenzen e.V.",
        "categories":[
           "poverty",
@@ -142,7 +142,7 @@ var data = [
        "link":"www.aerzte-ohne-grenzen.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"AtemWeg - Stiftung zur Erforschung von Lungenkrankheiten",
        "categories":[
           "health",
@@ -151,7 +151,7 @@ var data = [
        "link":"www.atemweg-stiftung.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Augustinum Stiftung",
        "categories":[
           "old age",
@@ -163,7 +163,7 @@ var data = [
        "link":"www.moeglichmacherwerden.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Bärenherz Stiftung",
        "categories":[
           "health",
@@ -174,7 +174,7 @@ var data = [
        "link":"www.baerenherz.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Berner Sennenhunde in Not e.V.",
        "categories":[
           "environment",
@@ -183,7 +183,7 @@ var data = [
        "link":"www.berner-sennenhunde-in-not.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Bethanien Kinder- und Jugenddorf Bergisch Gladbach",
        "categories":[
           "poverty",
@@ -195,7 +195,7 @@ var data = [
        "link":"www.bethanien-kinderdoerfer.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Bethanien Kinder- und Jugenddorf Eltville",
        "categories":[
           "poverty",
@@ -207,7 +207,7 @@ var data = [
        "link":"www.bethanien-kinderdoerfer.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Bethanien Kinderdörfer gGmbH",
        "categories":[
           "poverty",
@@ -219,7 +219,7 @@ var data = [
        "link":"www.bethanien-kinderdoerfer.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Björn Schulz Stiftung",
        "categories":[
           "health",
@@ -230,7 +230,7 @@ var data = [
        "link":"www.bjoern-schulz-stiftung.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Bund für Umwelt und Naturschutz Deutschland -BUND-, Landesverband Baden-Württemberg e.V.",
        "categories":[
           "environment"
@@ -238,7 +238,7 @@ var data = [
        "link":"www.bund-bawue.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Bundesverband Selbsthilfe Körperbehinderter e.V.",
        "categories":[
           "disabled",
@@ -248,7 +248,7 @@ var data = [
        "link":"www.bsk-ev.org"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Bundesvereinigung Lebenshilfe e.V.",
        "categories":[
           "disabled",
@@ -259,7 +259,7 @@ var data = [
        "link":"www.lebenshilfe.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Cap Anamur/Deutsche Not-Ärzte e.V.",
        "categories":[
           "health",
@@ -271,7 +271,7 @@ var data = [
        "link":"www.cap-anamur.org"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Caritas-Gemeinschaftsstiftung für das Bistum Aachen",
        "categories":[
           "old age",
@@ -283,7 +283,7 @@ var data = [
        "link":"www.caritasstiftung-aachen.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Claudia Lucas Stiftung",
        "categories":[
           "health",
@@ -294,7 +294,7 @@ var data = [
        "link":"www.claudia-lucas-stiftung.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Conpart e.V.",
        "categories":[
           "disabled",
@@ -305,7 +305,7 @@ var data = [
        "link":"www.conpart-bremen.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"CVJM-Gesamtverband in Deutschland e. V.",
        "categories":[
           "developing countries",
@@ -317,7 +317,7 @@ var data = [
        "link":"www.cvjm.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Deutsche AIDS-Stiftung",
        "categories":[
           "poverty",
@@ -328,7 +328,7 @@ var data = [
        "link":"www.aids-stiftung.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Deutsche Alzheimer Gesellschaft e. V. Selbsthilfe Demenz",
        "categories":[
           "old age",
@@ -339,7 +339,7 @@ var data = [
        "link":"www.deutsche-alzheimer.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Deutsche Arthrose-Hilfe e.V.",
        "categories":[
           "health",
@@ -348,7 +348,7 @@ var data = [
        "link":"www.arthrose.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Deutsche Demenzhilfe - DZNE-Stiftung für Forschung und Innovation",
        "categories":[
           "health",
@@ -357,7 +357,7 @@ var data = [
        "link":"www.deutsche-demenzhilfe.com"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Deutsche Gesellschaft zur Rettung Schiffbrüchiger",
        "categories":[
           "health",
@@ -368,7 +368,7 @@ var data = [
        "link":"www.seenotretter.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Deutsche Hirntumorhilfe e.V.",
        "categories":[
           "health",
@@ -378,7 +378,7 @@ var data = [
        "link":"www.hirntumorhilfe.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Deutsche KinderKrebshilfe der Deutschen Krebshilfe (Stiftung)",
        "categories":[
           "health",
@@ -390,7 +390,7 @@ var data = [
        "link":"www.kinderkrebshilfe.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Deutsche Krebshilfe (Stiftung )",
        "categories":[
           "health",
@@ -400,7 +400,7 @@ var data = [
        "link":"www.krebshilfe.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Deutsche Rheuma-Liga Bundesverband e.V.",
        "categories":[
           "disabled",
@@ -412,7 +412,7 @@ var data = [
        "link":"www.rheuma-liga.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Deutsche Stiftung für Demenzerkrankte - Wilhelm von Lauff-Stiftung",
        "categories":[
           "old age",
@@ -423,7 +423,7 @@ var data = [
        "link":"www.demenzstiftung.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Deutscher Kinderhospizverein e.V.",
        "categories":[
           "disabled",
@@ -435,7 +435,7 @@ var data = [
        "link":"www.deutscher-kinderhospizverein.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Deutscher Kinderschutzbund Kreisverband Ahrweiler e.V.",
        "categories":[
           "family",
@@ -447,7 +447,7 @@ var data = [
        "link":"www.kinderschutzbund-ahrweiler.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Deutscher Tierschutzbund e. V.",
        "categories":[
           "research",
@@ -457,7 +457,7 @@ var data = [
        "link":"www.tierschutzbund.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Deutsches Katholisches Blindenwerk e.V.",
        "categories":[
           "disabled",
@@ -469,7 +469,7 @@ var data = [
        "link":"www.blindenwerk.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"DRF Luftrettung - DRF e.V.",
        "categories":[
           "health",
@@ -478,7 +478,7 @@ var data = [
        "link":"drf-luftrettung.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Elterninitiative für krebskranke Kinder Jena e.V.",
        "categories":[
           "health",
@@ -489,7 +489,7 @@ var data = [
        "link":"www.ekk-jena.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Evangelische Erziehungsstiftung Gefrees",
        "categories":[
           "youth",
@@ -500,7 +500,7 @@ var data = [
        "link":"www.jesgefrees.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Evangelische Stiftung Alsterdorf",
        "categories":[
           "alcohol",
@@ -517,7 +517,7 @@ var data = [
        "link":"www.alsterdorf.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Evangelische Stiftung Lichtenstern",
        "categories":[
           "disabled",
@@ -529,7 +529,7 @@ var data = [
        "link":"www.lichtenstern.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Evangelische Stiftung Volmarstein",
        "categories":[
           "old age",
@@ -541,7 +541,7 @@ var data = [
        "link":"www.volmarstein.info"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Evangelisches Johannesstift SbR",
        "categories":[
           "disabled",
@@ -553,7 +553,7 @@ var data = [
        "link":"www.evangelisches-johannesstift.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Fördergemeinschaft Deutsche Kinderherzzentren e.V.",
        "categories":[
           "health",
@@ -565,7 +565,7 @@ var data = [
        "link":"www.kinderherzen.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Forschungsinstitut Kinderkrebs-Zentrum Hamburg",
        "categories":[
           "health",
@@ -576,7 +576,7 @@ var data = [
        "link":"www.kinderkrebs-forschung.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Frauen helfen Frauen e.V.",
        "categories":[
           "poverty",
@@ -588,7 +588,7 @@ var data = [
        "link":"www.fhf-stuttgart.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Freunde alter Menschen e.V.",
        "categories":[
           "old age",
@@ -598,7 +598,7 @@ var data = [
        "link":"www.famev.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Gebrüder-Gründler-Stiftung",
        "categories":[
           "alcohol",
@@ -610,7 +610,7 @@ var data = [
        "link":"www.gruendler-stiftung.org"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Gemeinschaftszentrum Sönke-Nissen-Park Stiftung",
        "categories":[
           "old age",
@@ -622,7 +622,7 @@ var data = [
        "link":"www.gutshaus-glinde.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Global Nature Fund (GNF)",
        "categories":[
           "developing countries",
@@ -632,7 +632,7 @@ var data = [
        "link":"www.globalnature.org"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Goethe-Universität Frankfurt am Main",
        "categories":[
           "health",
@@ -643,7 +643,7 @@ var data = [
        "link":"http://www.uni-frankfurt.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Habitat für Humanity Deutschland e.V.",
        "categories":[
           "developing countries"
@@ -651,7 +651,7 @@ var data = [
        "link":"www.habitatforhumanity.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Hans-Rosenthal-Stiftung - schnelle Hilfe in akuter Not - e.V.",
        "categories":[
           "old age",
@@ -663,7 +663,7 @@ var data = [
        "link":"www.hans-rosenthal-stiftung.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Helping Hands e.V.  Wirkungsvoll helfen · Nachhaltig verändern",
        "categories":[
           "poverty",
@@ -675,7 +675,7 @@ var data = [
        "link":"www.helpinghandsev.org"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Hinz&amp;Kunzt",
        "categories":[
           "alcohol",
@@ -688,7 +688,7 @@ var data = [
        "link":"www.hinzundkunzt.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"humedica e.V.",
        "categories":[
           "poverty",
@@ -700,7 +700,7 @@ var data = [
        "link":"www.humedica.org"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"INTACT Mädchenhilfe, Internationale Aktion gegen die Beschneidung von Mädchen und Frauen e.V.",
        "categories":[
           "health",
@@ -712,7 +712,7 @@ var data = [
        "link":"www.intact-ev.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Internationale Christliche Botschaft Jerusalem - Deutscher Zweig e. V. (kurz: ICEJ e. V.)",
        "categories":[
           "poverty",
@@ -725,7 +725,7 @@ var data = [
        "link":"www.icej.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"IRIS-STIFTUNG",
        "categories":[
           "disabled",
@@ -737,7 +737,7 @@ var data = [
        "link":"www.iris-stiftung.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"J. Wilh. Tenten Stiftung",
        "categories":[
           "old age",
@@ -748,7 +748,7 @@ var data = [
        "link":"www.tenten-stiftung.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"KARO e.V.",
        "categories":[
           "poverty",
@@ -760,7 +760,7 @@ var data = [
        "link":"www.karo-ev.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Katholische Jugendfürsorge der Erzdiözese München und Freising e.V.",
        "categories":[
           "disabled",
@@ -772,7 +772,7 @@ var data = [
        "link":"www.kjf-muenchen.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Kinder von Tschernobyl - Stiftung des Landes Niedersachsen",
        "categories":[
           "health",
@@ -781,7 +781,7 @@ var data = [
        "link":"www.tschernobyl.niedersachsen.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Kinder- und Jugendhospizstiftung Balthasar",
        "categories":[
           "disabled",
@@ -793,7 +793,7 @@ var data = [
        "link":"www.balthasarstiftung.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Kinderheim Kleine Strolche e.V. - Hilfe für traumatisierte Kinder",
        "categories":[
           "youth",
@@ -803,7 +803,7 @@ var data = [
        "link":"www.kinderheim-kleine-strolche.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"kinderherzen - Fördergemeinschaft Deutsche Kinderherzzentren e.V.",
        "categories":[
           "health",
@@ -815,7 +815,7 @@ var data = [
        "link":"www.kinderherzen.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"KINDERHILFE - Hilfe für krebs- und schwerkranke Kinder e.V.",
        "categories":[
           "health",
@@ -827,7 +827,7 @@ var data = [
        "link":"www.kinderhilfe-ev.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Kinderrechte Afrika e.V. - Zukunft für Kinder in Not",
        "categories":[
           "poverty",
@@ -839,7 +839,7 @@ var data = [
        "link":"www.kinderrechte-afrika.org"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Kinderschutzbund Aachen e.V.",
        "categories":[
           "poverty",
@@ -851,7 +851,7 @@ var data = [
        "link":"www.kinderschutzbund-aachen.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Konrad-Adenauer-Stiftung e.V.",
        "categories":[
           "developing countries",
@@ -861,7 +861,7 @@ var data = [
        "link":"kas.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Krebsverband Baden-Württemberg e. V.",
        "categories":[
           "health",
@@ -870,7 +870,7 @@ var data = [
        "link":"www.krebsverband-bw.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Kurt-Hahn-Stiftung c/o Deutsches Stiftungszentrum GmbH",
        "categories":[
           "youth",
@@ -881,7 +881,7 @@ var data = [
        "link":"www.kurt-hahn-stiftung.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Lebenszentrum Königsborn für Menschen mit Behinderungen",
        "categories":[
           "disabled",
@@ -892,7 +892,7 @@ var data = [
        "link":"www.lebenszentrum-koenigsborn.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Leonhard gemeinnützige GmbH | Unternehmertum für Gefangene",
        "categories":[
           "alcohol",
@@ -905,7 +905,7 @@ var data = [
        "link":"www.leonhard.eu"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Lichtbrücke e. V.",
        "categories":[
           "developing countries",
@@ -914,7 +914,7 @@ var data = [
        "link":"www.lichtbruecke.com"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"MainLichtblick e. V.",
        "categories":[
           "disabled",
@@ -927,7 +927,7 @@ var data = [
        "link":"www.mainlichtblick.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Maria im Tann, Zentrum für Kinder-, Jugend- u. Familienhilfe",
        "categories":[
           "family",
@@ -937,7 +937,7 @@ var data = [
        "link":"www.mariaimtann.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Medica mondiale e. V.",
        "categories":[
           "health",
@@ -948,7 +948,7 @@ var data = [
        "link":"www.medicamondiale.org"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Mercy Ships Deutschland e.V.",
        "categories":[
           "poverty",
@@ -960,7 +960,7 @@ var data = [
        "link":"www.mercyships.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"missio-Internationales Katholisches Missionswerk e.V.",
        "categories":[
           "poverty",
@@ -972,7 +972,7 @@ var data = [
        "link":"www.missio-hilft.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Mütter- und FamilienZentrum Ingelheim e.V. ( MütZe e.V.)",
        "categories":[
           "family",
@@ -984,7 +984,7 @@ var data = [
        "link":"www.muetze-ingelheim.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"NABU Naturschutzbund e.V. Bundesgeschäftsstelle",
        "categories":[
           "environment",
@@ -993,7 +993,7 @@ var data = [
        "link":"www.NABU.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Niedersächsische Krebsgesellschaft e.V.",
        "categories":[
           "disabled",
@@ -1004,7 +1004,7 @@ var data = [
        "link":"www.nds-krebsgesellschaft.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Niedersächsische Krebsstiftung",
        "categories":[
           "health",
@@ -1013,7 +1013,7 @@ var data = [
        "link":"www.nds-krebsstiftung.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Nikolauspflege - Stiftung für blinde und sehbehinderte Menschen",
        "categories":[
           "disabled",
@@ -1024,7 +1024,7 @@ var data = [
        "link":"www.nikolauspflege.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"PRO RETINA Deutschland e.V.",
        "categories":[
           "old age",
@@ -1036,7 +1036,7 @@ var data = [
        "link":"www.pro-retina.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Rittergut Kleine Strolche gGmbH - Therapiezentrum für traumatisierte Kinder",
        "categories":[
           "youth",
@@ -1046,7 +1046,7 @@ var data = [
        "link":"www.kinderheim-kleine-strolche.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"ROTE NASEN Deutschland e.V.",
        "categories":[
           "old age",
@@ -1059,7 +1059,7 @@ var data = [
        "link":"www.rotenasen.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Rummelsberger Diakonie e.V.",
        "categories":[
           "old age",
@@ -1071,7 +1071,7 @@ var data = [
        "link":"www.rummelsberger-diakonie.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"Sächsische Krebsgesellschaft e.V.",
        "categories":[
           "health",
@@ -1080,7 +1080,7 @@ var data = [
        "link":"www.skg-ev.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"SAVE Wildlife Conservation Fund - Stiftung",
        "categories":[
           "developing countries",
@@ -1092,7 +1092,7 @@ var data = [
        "link":"www.save-wildlife.org"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"SOS-Kinderdorf-Stiftung",
        "categories":[
           "disabled",
@@ -1104,7 +1104,7 @@ var data = [
        "link":"www.sos-kinderdorf-stiftung.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"SOS-Kinderdörfer weltweit",
        "categories":[
           "poverty",
@@ -1116,7 +1116,7 @@ var data = [
        "link":"www.sos-kinderdoerfer.de"
     },
     {
-       "region":"Germany",
+       "regions":"Germany",
        "name":"SoVD Sozialverband Deutschland, Landesverband NRW",
        "categories":[
           "old age",

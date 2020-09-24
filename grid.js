@@ -8,10 +8,10 @@ $(document).ready(function() {
         sorting: {
             mode: 'multiple'
         },
-        // filterRow: {
-        //     visible: true,
-        //     applyFilter: 'auto'
-        // },
+        filterRow: {
+            visible: true,
+            applyFilter: 'auto'
+        },
         headerFilter: {
             visible: true,
         },
@@ -54,18 +54,17 @@ $(document).ready(function() {
             caption: "Regions",
             dataField: "regions",
             dataType: "string",
-            filterValues: qs.regions.split(','),
-        },
-        {
+        },{
             caption: "name",
             dataField: "name",
             dataType: "string",
-        }, {
+        },{
             caption: "Categories",
             dataField: "categories",
-            dataType: "string",
+            // filterValue: qs.categories.split(',')[0],
             filterValues: qs.categories.split(','),
-        }, {
+            // filterValues: qs.regions.split(','),
+        },{
             caption: "link",
             dataField: "link",
             dataType: "string",
