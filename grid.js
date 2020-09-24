@@ -51,23 +51,20 @@ $(document).ready(function() {
         dataSource: data,
         columns: [
         {
-            caption: "region",
-            dataField: "region",
+            caption: "Regions",
+            dataField: "regions",
             dataType: "string",
-            filterValues: qs.region.split(','),
+            filterValues: qs.regions.split(','),
         },
         {
             caption: "name",
             dataField: "name",
             dataType: "string",
-            allowSearch: true,
         }, {
-            caption: "category",
-            dataField: "category",
+            caption: "Categories",
+            dataField: "categories",
             dataType: "string",
-            selectedFilterOperation: "=",
-            filterValue: qs.category,
-            allowSearch: true
+            filterValues: qs.categories.split(','),
         }, {
             caption: "link",
             dataField: "link",

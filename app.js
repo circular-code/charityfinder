@@ -1,7 +1,11 @@
 var continents = {};
 $(document).ready(function() {
 
-    // ["everywhere", "europe", "asia", "northamerica", "southamerica", "australia", "africa", "germany", "england", "greece"];
+    //TODO: Tagbox machen aus choose regions und choose categories
+    //TODO: mehrere Categories auswählbar machen, kleines Häckchen bei ausgewälter Category im PopUp anzeigen (o.Ä.)
+    //TODO: charity bilder rechts als background
+    //TODO: Mission, Disclaimer, Google seo optimierungen (this is meant to provide a unbiased overview over available charities, a starting point for research, no corrupt rating etc. Provide free choice, but research specific choices pls)
+    //TODO: Footer, impressum etc.
     var treeView;
     var regions = [
         {
@@ -56,7 +60,7 @@ $(document).ready(function() {
             "name": "Greece",
             "selected": true,
         }
-      ]
+    ];
     var categories = ["animals", "alcohol", "drugs", "culture", "community", "disabled", "family", "youth", "kids", "sport", "violence", "education", "environment", "health", "old age", "unemployment", "rights", "religion", "research"];
 
     var regionInput = $("#regionInput").dxDropDownBox({
@@ -151,12 +155,12 @@ $(document).ready(function() {
 
     function search() {
         var href = "data?";
-        var region = regionInput.option('value');
-        var category = categoryInput.option('value');
+        var regions = regionInput.option('value');
+        var categories = categoryInput.option('value');
         var search = searchInput.option('value');
 
-        href += region ? "&region=" + region : "";
-        href += category ? "&category=" + category : "";
+        href += regions ? "&regions=" + regions : "";
+        href += categories ? "&categories=" + categories : "";
         href += search ? "&search=" + search : "";
 
         window.location.href = href;
@@ -188,7 +192,7 @@ $(document).ready(function() {
             return treeView.selectItem(value);
 
         treeView.unselectAll();
-    };
+    }
 });
 
 
