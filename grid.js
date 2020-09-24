@@ -69,15 +69,6 @@ $(document).ready(function() {
             filterValue: qs.category,
             allowSearch: true
         }, {
-            caption: "tags",
-            dataField: "tags",
-            dataType: "object",
-            cellTemplate: function(content, info) {
-                $(content).append(info.data.tags.join(', '));
-                return content;
-            },
-            allowSearch: true
-        }, {
             caption: "link",
             dataField: "link",
             dataType: "string",
