@@ -61,15 +61,41 @@ $(document).ready(function() {
         },{
             caption: "Categories",
             dataField: "categories",
-            // filterValue: qs.categories.split(',')[0],
-            filterValues: qs.categories.split(','),
-            // filterValues: qs.regions.split(','),
+            headerFilter: {
+                dataSource: [{"value":"animals","text":"animals"},{"value":"alcohol","text":"alcohol"},{"value":"drugs","text":"drugs"},{"value":"culture","text":"culture"},{"value":"community","text":"community"},{"value":"disabled","text":"disabled"},{"value":"family","text":"family"},{"value":"youth","text":"youth"},{"value":"kids","text":"kids"},{"value":"sport","text":"sport"},{"value":"violence","text":"violence"},{"value":"education","text":"education"},{"value":"environment","text":"environment"},{"value":"health","text":"health"},{"value":"old age","text":"old age"},{"value":"unemployment","text":"unemployment"},{"value":"rights","text":"rights"},{"value":"religion","text":"religion"},{"value":"research","text":"research"}]
+            },
+            calculateDisplayValue: function (data) {
+                var displayText = '';
+                for (var i in data['categories']) {
+                    var assignment = data['categories'][i];
+                    displayText += assignment.name + ', ';
+                }
+                displayText = displayText.slice(0, -2); // trim trailing delimter
+
+                return displayText;
+            },
+            calculateFilterExpression: function (value, operation) {
+                var column = this;
+                console.log(value);
+                if (value) {
+                    var selector = function (data) {
+                        var values = column.calculateCellValue(data);
+                        return values && values.indexOf(value) >= 0;
+                    };
+                    return [selector, operation || "=", true];
+                }
+            },
+            calculateCellValue: function (data) {
+                return $.map(data['categories'], function (o) {
+                    return o.name;
+                });
+            }
         },{
             caption: "link",
             dataField: "link",
             dataType: "string",
             cellTemplate: function(content, info) {
-                $(content).append($('<a target="_blank "href="' + info.data.link + '">' + info.data.link + '</a> '));
+                $(content).append($('<a target="_blank "href="https://' + info.data.link + '">' + info.data.link + '</a> '));
                 return content;
             },
             allowSearch: true,
