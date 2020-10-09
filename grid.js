@@ -8,17 +8,17 @@ $(document).ready(function() {
         sorting: {
             mode: 'multiple'
         },
-        filterRow: {
-            visible: true,
-            applyFilter: 'auto'
-        },
         headerFilter: {
             visible: true,
         },
         allowHeaderFiltering: true,
-        paging: {
+        scrolling: {
+            mode: "infinite"
+        },
+        loadPanel: {
             enabled: true
         },
+        height: "200px",
         searchPanel: {
             highlightCaseSensitive: false,
             highlightSearchText: true,
@@ -26,15 +26,7 @@ $(document).ready(function() {
             searchVisibleColumnsOnly: false,
             text: "",
             visible: true,
-            width: 160
-        },
-        pager: {
-            allowedPageSizes: [10,20,50,100],
-            infoText: "page {0}/{1} ({2} results)",
-            showInfo: true,
-            showNavigationButtons: true,
-            showPageSizeSelector: true,
-            visible: true
+            width: "100%"
         },
         columnResizingMode: 'widget',
         width: '100%',
@@ -54,6 +46,7 @@ $(document).ready(function() {
             caption: "Regions",
             dataField: "regions",
             dataType: "string",
+            filterValues: qs.regions.split(',')
         },{
             caption: "name",
             dataField: "name",
@@ -61,29 +54,38 @@ $(document).ready(function() {
         },{
             caption: "Categories",
             dataField: "categories",
+            filterValues: qs.categories.split(','),
             headerFilter: {
                 dataSource: [{"value":"animals","text":"animals"},{"value":"alcohol","text":"alcohol"},{"value":"drugs","text":"drugs"},{"value":"culture","text":"culture"},{"value":"community","text":"community"},{"value":"disabled","text":"disabled"},{"value":"family","text":"family"},{"value":"youth","text":"youth"},{"value":"kids","text":"kids"},{"value":"sport","text":"sport"},{"value":"violence","text":"violence"},{"value":"education","text":"education"},{"value":"environment","text":"environment"},{"value":"health","text":"health"},{"value":"old age","text":"old age"},{"value":"unemployment","text":"unemployment"},{"value":"rights","text":"rights"},{"value":"religion","text":"religion"},{"value":"research","text":"research"}]
             },
             calculateDisplayValue: function (data) {
                 var displayText = '';
-                for (var i in data['categories']) {
-                    var assignment = data['categories'][i];
-                    displayText += assignment.name + ', ';
-                }
-                displayText = displayText.slice(0, -2); // trim trailing delimter
 
-                return displayText;
+                for (var i in data['categories'])
+                    displayText += data['categories'][i].name + ', ';
+
+                return displayText.slice(0, -2);
             },
-            calculateFilterExpression: function (value, operation) {
+            calculateFilterExpression: function (value, operation, target) {
                 var column = this;
                 console.log(value);
-                if (value) {
-                    var selector = function (data) {
-                        var values = column.calculateCellValue(data);
-                        return values && values.indexOf(value) >= 0;
-                    };
-                    return [selector, operation || "=", true];
+
+                if (!value)
+                    return;
+
+                let filterExpression = [];
+
+                for (let i = 0; i < this.filterValues.length; i++){
+                    if (i !== 0)
+                        filterExpression.push("or")
+                        // filterExpression.push("and")
+
+                    filterExpression.push(["categories", "contains", this.filterValues[i]]);
                 }
+
+                return filterExpression;
+
+                // return [selector, operation || "=", true];
             },
             calculateCellValue: function (data) {
                 return $.map(data['categories'], function (o) {

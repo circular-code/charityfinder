@@ -123,7 +123,7 @@ $(document).ready(function() {
     var searchInput = $("#searchInput").dxTextBox({
         showClearButton: true,
         stylingMode: "filled",
-        placeholder: "your searchterm",
+        placeholder: "optional searchterm",
         width: "200px",
         onKeyDown: function(n) {
             n.event.key === "Enter" && console.log('test');
@@ -131,7 +131,7 @@ $(document).ready(function() {
     }).dxTextBox("instance");
 
     var categoryPopup = $('#categoryPopup').dxPopup({
-        title: 'Choose a category',
+        title: 'Choose one or more categories',
         contentTemplate: function() {
             var container = $('<div></div>');
             container.addClass('category-wrapper');
@@ -154,7 +154,7 @@ $(document).ready(function() {
     $('#go').on('click', search);
 
     function search() {
-        var href = "data?";
+        var href = "data.html?";
         var regions = regionInput.option('value');
         var categories = categoryInput.option('value');
         var search = searchInput.option('value');
@@ -180,6 +180,7 @@ $(document).ready(function() {
         container.append(img);
         container.append(title);
         container.on('click', function() {
+            //TODO: add support for selecting multiple categories
             categoryInput.option('value', category);
             categoryPopup.hide();
         });
