@@ -107,18 +107,17 @@ $(document).ready(function() {
         }
     }).dxDropDownBox('instance');
 
-    var categoryInput = $("#categoryInput").dxSelectBox({
-        dataSource: categories,
-        stylingMode: "filled",
+    var categoryInput = $("#categoryInput").dxTagBox({
+        items: categories,
         width: "200px",
         showClearButton: true,
-        value: "disabled",
+        value: ["disabled"],
         placeholder: "any",
         onOpened: function(e) {
             e.component.close();
             categoryPopup.show();
         }
-    }).dxSelectBox("instance");
+    }).dxTagBox("instance");
 
     var searchInput = $("#searchInput").dxTextBox({
         showClearButton: true,
@@ -181,8 +180,16 @@ $(document).ready(function() {
         container.append(title);
         container.on('click', function() {
             //TODO: add support for selecting multiple categories
-            categoryInput.option('value', category);
-            categoryPopup.hide();
+
+            if (container.hasClass('selected')) {
+                container.removeClass('selected');
+                //TODO: remove value
+            }
+            else {
+                container.addClass('selected');
+                //TODO: add value to List of values, not override like currently
+                categoryInput.option('value', [category]);
+            }
         });
 
         return container;

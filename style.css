@@ -159,3 +159,7 @@ body {
 #regionInput input {
     cursor: pointer;
 }
+
+.category.selected {
+    background: #d8d8d8;
+}
