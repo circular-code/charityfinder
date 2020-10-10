@@ -112,7 +112,7 @@ $(document).ready(function() {
         stylingMode: "filled",
         width: "200px",
         showClearButton: true,
-        value: "health",
+        value: "disabled",
         placeholder: "any",
         onOpened: function(e) {
             e.component.close();

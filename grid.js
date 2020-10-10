@@ -5,20 +5,30 @@ $(document).ready(function() {
     var ready = true;
 
     $('#charitiesGrid').dxDataGrid({
+        dataSource: data,
+        columnResizingMode: 'widget',
+        height: "200px",
+        width: '100%',
+        height: '100%',
+        showBorders: true,
+        allowColumnResizing: true,
+        allowColumnReordering: true,
+        allowHeaderFiltering: true,
+        elementAttr:{
+            title: 'click on a row to open your charity in a new browser tab'
+        },
         sorting: {
             mode: 'multiple'
         },
         headerFilter: {
             visible: true,
         },
-        allowHeaderFiltering: true,
         scrolling: {
             mode: "infinite"
         },
         loadPanel: {
             enabled: true
         },
-        height: "200px",
         searchPanel: {
             highlightCaseSensitive: false,
             highlightSearchText: true,
@@ -28,43 +38,47 @@ $(document).ready(function() {
             visible: true,
             width: "100%"
         },
-        columnResizingMode: 'widget',
-        width: '100%',
-        height: '100%',
-        showBorders: true,
-        allowColumnResizing: true,
-        allowColumnReordering: true,
         onContentReady: function(e) {
             if (ready) {
                e.component.searchByText(qs.search);
                ready = false;
             }
         },
-        dataSource: data,
+        onRowClick: function(e) {
+            window.open("https://" + e.data.link, '_blank');
+        },
         columns: [
         {
             caption: "Regions",
             dataField: "regions",
             dataType: "string",
-            filterValues: qs.regions.split(',')
+            filterValues: qs.regions.split(','),
+            width: '200px',
         },{
             caption: "name",
             dataField: "name",
             dataType: "string",
+            cellTemplate: function(container, options) {
+                container.addClass("name-cell");
+                container.append(options.data['name']);
+            },
         },{
             caption: "Categories",
             dataField: "categories",
+            width: '800px',
             filterValues: qs.categories.split(','),
             headerFilter: {
                 dataSource: [{"value":"animals","text":"animals"},{"value":"alcohol","text":"alcohol"},{"value":"drugs","text":"drugs"},{"value":"culture","text":"culture"},{"value":"community","text":"community"},{"value":"disabled","text":"disabled"},{"value":"family","text":"family"},{"value":"youth","text":"youth"},{"value":"kids","text":"kids"},{"value":"sport","text":"sport"},{"value":"violence","text":"violence"},{"value":"education","text":"education"},{"value":"environment","text":"environment"},{"value":"health","text":"health"},{"value":"old age","text":"old age"},{"value":"unemployment","text":"unemployment"},{"value":"rights","text":"rights"},{"value":"religion","text":"religion"},{"value":"research","text":"research"}]
             },
-            calculateDisplayValue: function (data) {
-                var displayText = '';
+            cellTemplate: function(container, options) {
+                container.addClass("category-cell");
 
-                for (var i in data['categories'])
-                    displayText += data['categories'][i].name + ', ';
+                var htmlString = '';
 
-                return displayText.slice(0, -2);
+                for (var i in options.data['categories'])
+                    htmlString += '<span class="category-tag ' + (options.column.filterValues && options.column.filterValues.indexOf(options.data['categories'][i].name) > -1 ? 'category-tag-primary' : '') + '">' + options.data['categories'][i].name + '</span>';
+
+                container.append(htmlString);
             },
             calculateFilterExpression: function (value, operation, target) {
                 var column = this;
@@ -92,15 +106,6 @@ $(document).ready(function() {
                     return o.name;
                 });
             }
-        },{
-            caption: "link",
-            dataField: "link",
-            dataType: "string",
-            cellTemplate: function(content, info) {
-                $(content).append($('<a target="_blank "href="https://' + info.data.link + '">' + info.data.link + '</a> '));
-                return content;
-            },
-            allowSearch: true,
         }],
     }).dxDataGrid('instance');
 });
