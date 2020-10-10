@@ -52,7 +52,7 @@ $(document).ready(function() {
             caption: "Regions",
             dataField: "regions",
             dataType: "string",
-            filterValues: qs.regions.split(','),
+            filterValues: typeof qs.regions === 'string' ? qs.regions.split(',') : [],
             width: '200px',
         },{
             caption: "name",
@@ -66,7 +66,7 @@ $(document).ready(function() {
             caption: "Categories",
             dataField: "categories",
             width: '800px',
-            filterValues: qs.categories.split(','),
+            filterValues: typeof qs.categories === 'string' ? qs.categories.split(',') : [],
             headerFilter: {
                 dataSource: [{"value":"animals","text":"animals"},{"value":"alcohol","text":"alcohol"},{"value":"drugs","text":"drugs"},{"value":"culture","text":"culture"},{"value":"community","text":"community"},{"value":"disabled","text":"disabled"},{"value":"family","text":"family"},{"value":"youth","text":"youth"},{"value":"kids","text":"kids"},{"value":"sport","text":"sport"},{"value":"violence","text":"violence"},{"value":"education","text":"education"},{"value":"environment","text":"environment"},{"value":"health","text":"health"},{"value":"old age","text":"old age"},{"value":"unemployment","text":"unemployment"},{"value":"rights","text":"rights"},{"value":"religion","text":"religion"},{"value":"research","text":"research"}]
             },
