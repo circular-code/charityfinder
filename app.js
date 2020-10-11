@@ -117,16 +117,16 @@ $(document).ready(function() {
         }
     }).dxTagBox("instance");
 
-    var searchInput = $("#searchInput").dxTextBox({
-        showClearButton: true,
-        stylingMode: "filled",
-        placeholder: "optional searchterm",
-        width: "200px",
-        value: typeof qs.search === 'string' ? qs.search : null,
-        onKeyDown: function(n) {
-            n.event.key === "Enter" && console.log('test');
-        }
-    }).dxTextBox("instance");
+    // var searchInput = $("#searchInput").dxTextBox({
+    //     showClearButton: true,
+    //     stylingMode: "filled",
+    //     placeholder: "optional searchterm",
+    //     width: "200px",
+    //     value: typeof qs.search === 'string' ? qs.search : null,
+    //     onKeyDown: function(n) {
+    //         n.event.key === "Enter" && console.log('test');
+    //     }
+    // }).dxTextBox("instance");
 
     var categoryPopup = $('#categoryPopup').dxPopup({
         title: 'Choose one or more categories',
@@ -168,7 +168,7 @@ $(document).ready(function() {
         var href = "";
         var regions = regionInput.option('value');
         var categories = categoryInput.option('value');
-        var search = searchInput.option('value');
+        // var search = searchInput.option('value');
 
         if (regions && regions.length > 0)
             href += regions ? "&regions=" + regions : "";
@@ -176,8 +176,8 @@ $(document).ready(function() {
         if (categories && categories.length > 0)
             href += categories ? "&categories=" + categories : "";
 
-        if (search)
-            href += search ? "&search=" + search : "";
+        // if (search)
+        //     href += search ? "&search=" + search : "";
 
         // only replaces first instance
         href = href.replace('&','?');
