@@ -7,7 +7,7 @@ $(document).ready(function() {
 
     //TODO: Google seo optimierungen
     //TODO: impressum etc.
-
+    //TODO: "DONE" Button after category selection
     //TODO: selected:true für qs übergebene regions
     var treeView;
     var regions = [
