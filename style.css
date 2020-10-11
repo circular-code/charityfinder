@@ -270,9 +270,13 @@ section#mission, section#disclaimer {
     flex-grow: 1;
 }
 
-h3 {
+section > h3 {
     font-size: 1.5rem;
     font-weight: bold;
     color: #9c9c9c;
     text-transform: uppercase;
+}
+
+section:not(#searchResults) > h3 {
+    margin-bottom: 1rem;
 }
