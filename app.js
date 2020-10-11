@@ -1,5 +1,8 @@
 var qs = parseQueryString(window.location.search.substring(1));
 
+if (window.location.href.indexOf('?') > -1)
+    $('#searchResults').slideDown();
+
 $(document).ready(function() {
 
     //TODO: Google seo optimierungen
@@ -165,7 +168,7 @@ $(document).ready(function() {
     function search() {
 
         //TODO: dont reload page on search
-        var href = "";
+        var href = "?";
         var regions = regionInput.option('value');
         var categories = categoryInput.option('value');
         // var search = searchInput.option('value');
@@ -180,7 +183,7 @@ $(document).ready(function() {
         //     href += search ? "&search=" + search : "";
 
         // only replaces first instance
-        href = href.replace('&','?');
+        href = href.replace('&','');
 
         window.location.href = href;
     }
