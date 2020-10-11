@@ -1,36 +1,39 @@
 body {
-    padding: 40px;
     margin: 0;
     background: #fbfbfb;
     font-family: 'Roboto', sans-serif;
 }
 
-.main-headline img {
+#logo {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-top: 50px;
+    color: #44e073;
+    text-decoration: underline;
+}
+
+#subHeadline {
+    font-size: 41px;
+    color: #929292;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    margin-left: 30px;
+}
+
+#logo, #subHeadline {
+    display: inline-block;
+}
+
+#subHeadline img {
     width: 85px;
     opacity: 0.6;
     position: relative;
     top: 12px;
 }
 
-#logo {
-    font-size: 5rem;
-    font-weight: bold;
-    margin-left: 211px;
-    margin-bottom: 60px;
-    margin-top: 50px;
-    color: #44e073;
-    text-decoration: underline;
-}
-
-.main-headline {
-    font-size: 41px;
-    color: #929292;
-    font-weight: lighter;
-    letter-spacing: 2px;
-}
-
-#searchContainer {
-    margin: 15px 215px;
+#searchField {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #go {
@@ -47,9 +50,8 @@ body {
     transition: background-color 0.5s ease-in-out;
     cursor: pointer;
     width: 400px;
-    position: relative;
-    margin-top: 20px;
-    left: 248px;
+    height: 60px;
+    margin-top: 50px;
 }
 
 #go:hover {
@@ -101,7 +103,7 @@ body {
     height: 64px;
 }
 
-.category h3 {
+.category h4 {
     font-weight: bold;
     font-size: 15px;
     color: #333;
@@ -120,20 +122,26 @@ body {
 .search-pair {
     margin: 1rem 0rem;
     padding: 1rem 1rem 1rem 0;
-    display: flex;
     position: relative;
 }
 
+#categoryInput {
+    height: 47px;
+    margin-top: 10px;
+}
+
+#categoryInput.dx-texteditor.dx-editor-underlined:after {
+    border-bottom: none;
+}
+
 .search-pair-description {
-    width: 180px;
-    margin-top: 20px;
     font-weight: bold;
-    margin-left: 84px;
 }
 
 .search-pair-description + div {
     border-bottom: 1px solid gray;
-    width: 400px!important;
+    width: 320px!important;
+    /* margin-left: 80px; */
 }
 
 .dx-checkbox-indeterminate .dx-checkbox-icon,
@@ -153,7 +161,6 @@ body {
     padding: 20px 25px;
     font-size: 1.5rem;
     position: absolute;
-    transform: translate(-81px, -24px);
 }
 
 #regionInput input {
@@ -162,4 +169,110 @@ body {
 
 .category.selected {
     background: #d8d8d8;
+}
+
+nav {
+    right: 0;
+    top: 0;
+    position: fixed;
+    z-index: 4;
+    padding-right: 20px;
+    width: 100%;
+    background: white;
+    background: rgba(255, 255, 255, 0.8);
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    flex-direction: row-reverse;
+    box-shadow: 0px 3px 13px 10px rgba(255, 255, 255, 0.8);
+}
+
+nav a {
+    padding: 10px 20px;
+    display: inline-block;
+    border-bottom: transparent;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    font-weight: 800;
+}
+
+nav ul {
+    display: flex;
+}
+
+.dx-datagrid, .dx-datagrid-header-panel, .dx-toolbar {
+    background-color: transparent;
+}
+
+#charitiesGrid {
+    position: relative;
+    bottom: 60px;
+    margin-bottom: -60px;
+}
+
+.category-tag {
+    background: #dedede;
+    padding: 0.5rem 1rem;
+    margin-right: 5px;
+    border-radius: 50px;
+}
+
+.category-tag-primary {
+    background: #44e073;
+    order: -1;
+}
+
+.category-cell {
+    display: flex;
+}
+
+tr.dx-row.dx-data-row:hover {
+    background: rgb(68 224 115 / 25%);
+    cursor: pointer;
+}
+
+td.name-cell {
+    font-weight: bold;
+}
+
+img.charity-link-button {
+    height: 20px;
+    opacity: 50%;
+}
+
+header, section, footer {
+    padding: 2rem;
+}
+
+section#searchResults {
+    background-color: #f9f9f9;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+    background: #909090;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section {
+    flex-basis: 100%;
+}
+
+section#mission, section#disclaimer {
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #9c9c9c;
+    text-transform: uppercase;
 }

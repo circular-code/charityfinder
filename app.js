@@ -1,11 +1,11 @@
-var continents = {};
+var qs = parseQueryString(window.location.search.substring(1));
+
 $(document).ready(function() {
 
-    //TODO: Tagbox machen aus choose regions und choose categories
-    //TODO: mehrere Categories auswählbar machen, kleines Häckchen bei ausgewälter Category im PopUp anzeigen (o.Ä.)
-    //TODO: charity bilder rechts als background
-    //TODO: Mission, Disclaimer, Google seo optimierungen (this is meant to provide a unbiased overview over available charities, a starting point for research, no corrupt rating etc. Provide free choice, but research specific choices pls)
-    //TODO: Footer, impressum etc.
+    //TODO: Google seo optimierungen
+    //TODO: impressum etc.
+
+    //TODO: selected:true für qs übergebene regions
     var treeView;
     var regions = [
         {
@@ -47,7 +47,6 @@ $(document).ready(function() {
             "ID": "1_1_1",
             "categoryId": "1_1",
             "name": "Germany",
-            "selected": true,
         },
         {
             "ID": "1_1_2",
@@ -58,7 +57,6 @@ $(document).ready(function() {
             "ID": "1_1_3",
             "categoryId": "1_1",
             "name": "Greece",
-            "selected": true,
         }
     ];
     var categories = ["animals", "alcohol", "drugs", "culture", "community", "disabled", "family", "youth", "kids", "sport", "violence", "education", "environment", "health", "old age", "unemployment", "rights", "religion", "research"];
@@ -71,11 +69,11 @@ $(document).ready(function() {
         width: "400px",
         openOnFieldClick: true,
         showClearButton: true,
-        placeholder: "everywhere",
+        placeholder: "Choose a region",
         displayExpr: "name",
-        value: ["Germany", "Greece"],
         valueExpr: "name",
-        contentTemplate: function(e){
+        value: typeof qs.regions === 'string' && qs.regions ? qs.regions.split(',') : [],
+        contentTemplate: function(e) {
             var value = e.component.option("value");
             $treeView = $("<div>").dxTreeView({
                 dataSource: e.component.getDataSource(),
@@ -87,19 +85,19 @@ $(document).ready(function() {
                 displayExpr: "name",
                 selectNodesRecursive: true,
                 selectByClick: true,
-                onContentReady: function(args){
+                onContentReady: function(args) {
                     syncTreeViewSelection(args.component, value);
                 },
-                onItemSelectionChanged: function(args){
+                onItemSelectionChanged: function(args) {
                     var selection = args.component.getSelectedNodes();
-                    selection = selection.map(function(selectedItem){return selectedItem.text});
+                    selection = selection.map(function(selectedItem) {return selectedItem.text});
                     e.component.option("value", selection);
                 }
             });
 
             treeView = $treeView.dxTreeView("instance");
 
-            e.component.on("valueChanged", function(args){
+            e.component.on("valueChanged", function(args) {
                 syncTreeViewSelection(treeView, args.value);
             });
 
@@ -111,8 +109,8 @@ $(document).ready(function() {
         items: categories,
         width: "200px",
         showClearButton: true,
-        value: ["disabled"],
-        placeholder: "any",
+        placeholder: "Choose a category",
+        value: typeof qs.categories === 'string'&&  qs.categories ? qs.categories.split(',') : [],
         onOpened: function(e) {
             e.component.close();
             categoryPopup.show();
@@ -124,6 +122,7 @@ $(document).ready(function() {
         stylingMode: "filled",
         placeholder: "optional searchterm",
         width: "200px",
+        value: typeof qs.search === 'string' ? qs.search : null,
         onKeyDown: function(n) {
             n.event.key === "Enter" && console.log('test');
         }
@@ -140,6 +139,17 @@ $(document).ready(function() {
 
             return container;
         },
+        onShown: function() {
+            var valueArr = categoryInput.option('value');
+            valueArr.forEach(function(value) {
+                $('[data-category="' + value + '"]').addClass('selected');
+            });
+
+            $('.category.selected').each(function() {
+                if (valueArr.indexOf($(this).attr('data-category')) === -1)
+                    $(this).removeClass('selected');
+            });
+        },
         dragEnabled: false,
         closeOnOutsideClick: true,
         height: '650px',
@@ -153,14 +163,24 @@ $(document).ready(function() {
     $('#go').on('click', search);
 
     function search() {
-        var href = "data.html?";
+
+        //TODO: dont reload page on search
+        var href = "";
         var regions = regionInput.option('value');
         var categories = categoryInput.option('value');
         var search = searchInput.option('value');
 
-        href += regions ? "&regions=" + regions : "";
-        href += categories ? "&categories=" + categories : "";
-        href += search ? "&search=" + search : "";
+        if (regions && regions.length > 0)
+            href += regions ? "&regions=" + regions : "";
+
+        if (categories && categories.length > 0)
+            href += categories ? "&categories=" + categories : "";
+
+        if (search)
+            href += search ? "&search=" + search : "";
+
+        // only replaces first instance
+        href = href.replace('&','?');
 
         window.location.href = href;
     }
@@ -168,6 +188,7 @@ $(document).ready(function() {
     function createCategory(category) {
         var container = $('<div>');
         container.addClass('category');
+        container.attr('data-category', category);
 
         var title = $('<h3>');
         title.text(category);
@@ -179,23 +200,22 @@ $(document).ready(function() {
         container.append(img);
         container.append(title);
         container.on('click', function() {
-            //TODO: add support for selecting multiple categories
-
             if (container.hasClass('selected')) {
                 container.removeClass('selected');
-                //TODO: remove value
+                var valueArr = categoryInput.option('value');
+                valueArr = valueArr.splice(valueArr.indexOf('category'), 1)
+                categoryInput.option('value', valueArr);
             }
             else {
                 container.addClass('selected');
-                //TODO: add value to List of values, not override like currently
-                categoryInput.option('value', [category]);
+                categoryInput.option('value', [...categoryInput.option('value'), category]);
             }
         });
 
         return container;
     }
 
-    function syncTreeViewSelection(treeView, value){
+    function syncTreeViewSelection(treeView, value) {
         if (value)
             return treeView.selectItem(value);
 

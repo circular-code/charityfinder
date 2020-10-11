@@ -9,7 +9,7 @@ $(document).ready(function() {
         columnResizingMode: 'widget',
         height: "200px",
         width: '100%',
-        height: '100%',
+        height: 500,
         showBorders: true,
         allowColumnResizing: true,
         allowColumnReordering: true,
@@ -21,7 +21,10 @@ $(document).ready(function() {
             mode: 'multiple'
         },
         headerFilter: {
-            visible: true,
+            visible: false
+        },
+        filterRow: {
+             visible: true
         },
         scrolling: {
             mode: "infinite"
@@ -49,13 +52,13 @@ $(document).ready(function() {
         },
         columns: [
         {
-            caption: "Regions",
+            caption: "Region",
             dataField: "regions",
             dataType: "string",
             filterValues: typeof qs.regions === 'string' ? qs.regions.split(',') : [],
             width: '200px',
         },{
-            caption: "name",
+            caption: "Name",
             dataField: "name",
             dataType: "string",
             cellTemplate: function(container, options) {
@@ -90,17 +93,15 @@ $(document).ready(function() {
 
                 let filterExpression = [];
 
-                for (let i = 0; i < this.filterValues.length; i++){
+                for (let i = 0; i < column.filterValues.length; i++) {
                     if (i !== 0)
                         filterExpression.push("or")
                         // filterExpression.push("and")
 
-                    filterExpression.push(["categories", "contains", this.filterValues[i]]);
+                    filterExpression.push(["categories", "contains", column.filterValues[i]]);
                 }
 
                 return filterExpression;
-
-                // return [selector, operation || "=", true];
             },
             calculateCellValue: function (data) {
                 return $.map(data['categories'], function (o) {

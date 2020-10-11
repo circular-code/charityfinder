@@ -3,6 +3,11 @@
     <head>
         <title>charity list info</title>
 
+        <meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+
         <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.1.0.min.js"></script>
 
         <link href="https://cdn3.devexpress.com/jslib/20.1.7/css/dx.common.css" rel="stylesheet">
@@ -16,45 +21,84 @@
     </head>
 
     <body>
-        <h1 id="logo">charitylist.info</h1>
-        <div id="searchContainer">
-            <div class="main-headline">
+
+        <header>
+            <h1 id="logo">charitylist.info</h1>
+            <h2 id="subHeadline">
                 <span>find</span>
                 <img src="your.svg" alt="your">
                 <span>charity</span>
-            </div>
-            <div id="search">
-                <div id="searchField">
-                    <div class="search-pair">
-                        <div class="search-pair-description">
-                            <i>1</i>
-                            <h3 class="search-pair-title">Choose a region</h3>
+            </aside>
+            <nav>
+                <ul>
+                    <li><a class="scroll" href="#searchResults">Results</a></li>
+                    <li><a class="scroll" href="#mission">Mission</a></li>
+                    <li><a class="scroll" href="#disclaimer">Disclaimer</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="wrapper">
+            <section id="searchContainer">
+                <article id="search">
+                    <div id="searchField">
+                        <div class="search-pair">
+                            <div class="search-pair-description">
+                                <!-- <i>1</i> -->
+                                <h4 class="search-pair-title">1: Choose a region</h4>
+                            </div>
+                            <div id="regionInput"></div>
                         </div>
-                        <div id="regionInput"></div>
-                    </div>
-                    <div class="search-pair">
-                        <div class="search-pair-description">
-                            <i>2</i>
-                            <h3 class="search-pair-title">Choose a category</h3>
+                        <div class="search-pair">
+                            <div class="search-pair-description">
+                                <!-- <i>2</i> -->
+                                <h4 class="search-pair-title">2: Choose a category</h4>
+                            </div>
+                            <div id="categoryInput"></div>
                         </div>
-                        <div id="categoryInput"></div>
+                        <button id="go">GO</button>
+                        <!-- <div class="search-pair">
+                            <div class="search-pair-description">
+                                <i>3</i>
+                                <h4 class="search-pair-title">Choose a search term</h4
+                            </div>
+                        </div> -->
                     </div>
-                    <div class="search-pair">
-                        <div class="search-pair-description">
-                            <i>3</i>
-                            <h3 class="search-pair-title">Enter a search term</h3>
-                        </div>
-                        <div id="searchInput"></div>
-                    </div>
+                </article>
+                <div id="hiddenContent">
+                    <div id="regionPopup"></div>
+                    <div id="categoryPopup"></div>
                 </div>
-            </div>
-            <button id="go">GO</button>
-            <div id="hiddenContent">
-                <div id="regionPopup"></div>
-                <div id="categoryPopup"></div>
-            </div>
-        </div>
+            </section>
+
+            <section id="searchResults">
+                <h3>Search Results</h3>
+                <div id="charitiesGrid"></div>
+            </section>
+
+            <section id="mission">
+                <h3>Mission</h3>
+                This page should serve as an entry point and is meant to provide an unbiased overview over all charities.
+                We view this page as a starting point for your research. We try to provide the results in an unbiased way, randomized, no logos, no corrupt rating system etc.
+                The content of the charity should be at the center of attention, not how much money they have or how big their influence is.
+            </section>
+
+            <section id="disclaimer">
+                <h3>Disclaimer</h3>
+                We cannot guarantee for the pages we link to. Surf at your own risk.
+            </section>
+        </main>
+
+        <footer>
+            <p>Copyright 2020 charitylist.info</p>
+            <ul>
+                <li><a class="scroll" href="#portfolio">Imprint</a></li>
+                <li><a class="scroll" href="#contact">Data Privacy & Protection</a></li>
+                <li><a class="scroll" href="#services">Get in Touch</a></li>
+            </ul>
+        </footer>
+        <script src="data.js"></script>
+        <script src="grid.js"></script>
         <script src="app.js"></script>
     </body>
 </html>
-
