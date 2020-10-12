@@ -9,6 +9,7 @@ $(document).ready(function() {
     //TODO: impressum etc.
     //TODO: "DONE" Button after category selection
     //TODO: selected:true für qs übergebene regions
+    //TODO: Daten direkt nach Value Änderung reloaden wenn Suchergebnisse offen?
     var treeView;
     var regions = [
         {
