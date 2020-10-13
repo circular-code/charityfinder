@@ -20,20 +20,20 @@ require('devextreme/integration/jquery');
 
 /* Events (dx.module-core.js) */
 
-require('devextreme/events/click');
+// require('devextreme/events/click');
 // require('devextreme/events/contextmenu');
 // require('devextreme/events/double_click');
 // require('devextreme/events/drag');
 // require('devextreme/events/hold');
-require('devextreme/events/hover');
-require('devextreme/events/pointer');
-require('devextreme/events/swipe');
+// require('devextreme/events/hover');
+// require('devextreme/events/pointer');
+// require('devextreme/events/swipe');
 // require('devextreme/events/transform');
 
 
 /* Data (dx.module-core.js) */
 
-const data = DevExpress.data = require('devextreme/bundles/modules/data');
+// const data = DevExpress.data = require('devextreme/bundles/modules/data');
 
 // data.odata = require('devextreme/bundles/modules/data.odata');
 
@@ -56,38 +56,38 @@ const ui = DevExpress.ui = require('devextreme/bundles/modules/ui');
 // ui.dxAutocomplete = require('devextreme/ui/autocomplete');
 // ui.dxBox = require('devextreme/ui/box');
 ui.dxButton = require('devextreme/ui/button');
-ui.dxDropDownButton = require('devextreme/ui/drop_down_button');
+// ui.dxDropDownButton = require('devextreme/ui/drop_down_button');
 // ui.dxButtonGroup = require('devextreme/ui/button_group');
 // ui.dxCalendar = require('devextreme/ui/calendar');
 // ui.dxCheckBox = require('devextreme/ui/check_box');
 // ui.dxColorBox = require('devextreme/ui/color_box');
 // ui.dxDateBox = require('devextreme/ui/date_box');
 // ui.dxDrawer = require('devextreme/ui/drawer');
-ui.dxDeferRendering = require('devextreme/ui/defer_rendering');
+// ui.dxDeferRendering = require('devextreme/ui/defer_rendering');
 ui.dxDropDownBox = require('devextreme/ui/drop_down_box');
-ui.dxDropDownMenu = require('devextreme/ui/drop_down_menu');
+// ui.dxDropDownMenu = require('devextreme/ui/drop_down_menu');
 // ui.dxFileUploader = require('devextreme/ui/file_uploader');
 // ui.dxForm = require('devextreme/ui/form');
 // ui.dxGallery = require('devextreme/ui/gallery');
 // ui.dxHtmlEditor = require('devextreme/ui/html_editor');
 // ui.dxList = require('devextreme/ui/list');
 ui.dxLoadIndicator = require('devextreme/ui/load_indicator');
-ui.dxLoadPanel = require('devextreme/ui/load_panel');
-ui.dxLookup = require('devextreme/ui/lookup');
+// ui.dxLoadPanel = require('devextreme/ui/load_panel');
+// ui.dxLookup = require('devextreme/ui/lookup');
 // ui.dxMap = require('devextreme/ui/map');
 // ui.dxMultiView = require('devextreme/ui/multi_view');
 // ui.dxNavBar = require('devextreme/ui/nav_bar');
 // ui.dxNumberBox = require('devextreme/ui/number_box');
-ui.dxOverlay = require('devextreme/ui/overlay');
-ui.dxPopover = require('devextreme/ui/popover');
+// ui.dxOverlay = require('devextreme/ui/overlay');
+// ui.dxPopover = require('devextreme/ui/popover');
 ui.dxPopup = require('devextreme/ui/popup');
-ui.dxProgressBar = require('devextreme/ui/progress_bar');
+// ui.dxProgressBar = require('devextreme/ui/progress_bar');
 // ui.dxRadioGroup = require('devextreme/ui/radio_group');
 // ui.dxRangeSlider = require('devextreme/ui/range_slider');
-ui.dxResizable = require('devextreme/ui/resizable');
-ui.dxResponsiveBox = require('devextreme/ui/responsive_box');
+// ui.dxResizable = require('devextreme/ui/resizable');
+// ui.dxResponsiveBox = require('devextreme/ui/responsive_box');
 ui.dxScrollView = require('devextreme/ui/scroll_view');
-ui.dxSelectBox = require('devextreme/ui/select_box');
+// ui.dxSelectBox = require('devextreme/ui/select_box');
 // ui.dxSlider = require('devextreme/ui/slider');
 // ui.dxSpeedDialAction = require('devextreme/ui/speed_dial_action');
 // ui.dxSwitch = require('devextreme/ui/switch');
@@ -97,9 +97,9 @@ ui.dxTagBox = require('devextreme/ui/tag_box');
 // ui.dxTextArea = require('devextreme/ui/text_area');
 ui.dxTextBox = require('devextreme/ui/text_box');
 // ui.dxTileView = require('devextreme/ui/tile_view');
-ui.dxToast = require('devextreme/ui/toast');
+// ui.dxToast = require('devextreme/ui/toast');
 // ui.dxToolbar = require('devextreme/ui/toolbar');
-ui.dxTooltip = require('devextreme/ui/tooltip');
+// ui.dxTooltip = require('devextreme/ui/tooltip');
 // ui.dxTrackBar = require('devextreme/ui/track_bar');
 // ui.dxDraggable = require('devextreme/ui/draggable');
 // ui.dxSortable = require('devextreme/ui/sortable');
@@ -124,17 +124,17 @@ ui.dxTooltip = require('devextreme/ui/tooltip');
 /* Web widgets (dx.module-widgets-web.js) */
 
 // ui.dxAccordion = require('devextreme/ui/accordion');
-ui.dxContextMenu = require('devextreme/ui/context_menu');
+// ui.dxContextMenu = require('devextreme/ui/context_menu');
 ui.dxDataGrid = require('devextreme/ui/data_grid');
 // ui.dxTreeList = require('devextreme/ui/tree_list');
-ui.dxMenu = require('devextreme/ui/menu');
+// ui.dxMenu = require('devextreme/ui/menu');
 // ui.dxPivotGrid = require('devextreme/ui/pivot_grid');
 // ui.dxPivotGridFieldChooser = require('devextreme/ui/pivot_grid_field_chooser');
 // data.PivotGridDataSource = require('devextreme/ui/pivot_grid/data_source');
 // data.XmlaStore = require('devextreme/ui/pivot_grid/xmla_store');
 // ui.dxScheduler = require('devextreme/ui/scheduler');
 ui.dxTreeView = require('devextreme/ui/tree_view');
-ui.dxFilterBuilder = require('devextreme/ui/filter_builder');
+// ui.dxFilterBuilder = require('devextreme/ui/filter_builder');
 // ui.dxFileManager = require('devextreme/ui/file_manager');
 // ui.dxDiagram = require('devextreme/ui/diagram');
 // ui.dxGantt = require('devextreme/ui/gantt');
