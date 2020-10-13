@@ -30,7 +30,6 @@ require('devextreme/integration/jquery');
 // require('devextreme/events/swipe');
 // require('devextreme/events/transform');
 
-
 /* Data (dx.module-core.js) */
 
 // const data = DevExpress.data = require('devextreme/bundles/modules/data');

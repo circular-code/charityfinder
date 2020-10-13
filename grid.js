@@ -4,28 +4,6 @@ $(document).ready(function() {
 
     var ready = true;
 
-    var data = [
-        {
-           "regions":"Germany",
-           "name":"action medeor - Deutsches Medikamenten-Hilfswerk e. V.",
-           "categories":[
-              {
-                 "name":"poverty"
-              },
-              {
-                 "name":"health"
-              },
-              {
-                 "name":"developing countries"
-              },
-              {
-                 "name":"community"
-              }
-           ],
-           "link":"www.medeor.de"
-        },
-    ];
-
     $('#charitiesGrid').dxDataGrid({
         dataSource: data,
         columnResizingMode: 'widget',
