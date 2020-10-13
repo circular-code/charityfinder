@@ -69,6 +69,7 @@ $(document).ready(function() {
             caption: "Categories",
             dataField: "categories",
             width: '800px',
+            dataType: "string",
             filterValues: typeof qs.categories === 'string' ? qs.categories.split(',') : [],
             headerFilter: {
                 //TODO: put selected values on top of list
