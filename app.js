@@ -13,53 +13,42 @@ $(document).ready(function() {
     var treeView;
     var regions = [
         {
-            "ID": 1,
-            "name": "Everywhere",
-            "expanded": true
-        },
-        {
-            "ID": "1_1",
-            "categoryId": 1,
+            "ID": "1",
             "name": "Europe",
         },
         {
-            "ID": "1_2",
-            "categoryId": 1,
+            "ID": "2",
             "name": "Asia",
         },
         {
-            "ID": "1_3",
-            "categoryId": 1,
+            "ID": "3",
             "name": "North America",
         },
         {
-            "ID": "1_4",
-            "categoryId": 1,
+            "ID": "4",
             "name": "South America",
         },
         {
-            "ID": "1_5",
-            "categoryId": 1,
+            "ID": "5",
             "name": "Australia",
         },
         {
-            "ID": "1_6",
-            "categoryId": 1,
+            "ID": "6",
             "name": "Africa",
         },
         {
-            "ID": "1_1_1",
-            "categoryId": "1_1",
+            "ID": "1_1",
+            "categoryId": "1",
             "name": "Germany",
         },
         {
-            "ID": "1_1_2",
-            "categoryId": "1_1",
+            "ID": "1_2",
+            "categoryId": "1",
             "name": "England"
         },
         {
-            "ID": "1_1_3",
-            "categoryId": "1_1",
+            "ID": "1_3",
+            "categoryId": "1",
             "name": "Greece",
         }
     ];
@@ -121,16 +110,16 @@ $(document).ready(function() {
         }
     }).dxTagBox("instance");
 
-    // var searchInput = $("#searchInput").dxTextBox({
-    //     showClearButton: true,
-    //     stylingMode: "filled",
-    //     placeholder: "optional searchterm",
-    //     width: "200px",
-    //     value: typeof qs.search === 'string' ? qs.search : null,
-    //     onKeyDown: function(n) {
-    //         n.event.key === "Enter" && console.log('test');
-    //     }
-    // }).dxTextBox("instance");
+    var searchInput = $("#searchInput").dxTextBox({
+        showClearButton: true,
+        stylingMode: "filled",
+        placeholder: "optional searchterm",
+        width: "200px",
+        value: typeof qs.search === 'string' ? qs.search : null,
+        onKeyDown: function(n) {
+            n.event.key === "Enter" && console.log('test');
+        }
+    }).dxTextBox("instance");
 
     var categoryPopup = $('#categoryPopup').dxPopup({
         title: 'Choose one or more categories',
@@ -172,7 +161,7 @@ $(document).ready(function() {
         var href = "?";
         var regions = regionInput.option('value');
         var categories = categoryInput.option('value');
-        // var search = searchInput.option('value');
+        var search = searchInput.option('value');
 
         if (regions && regions.length > 0)
             href += regions ? "&regions=" + regions : "";
@@ -180,8 +169,8 @@ $(document).ready(function() {
         if (categories && categories.length > 0)
             href += categories ? "&categories=" + categories : "";
 
-        // if (search)
-        //     href += search ? "&search=" + search : "";
+        if (search)
+            href += search ? "&search=" + search : "";
 
         // only replaces first instance
         href = href.replace('&','');

@@ -13,12 +13,7 @@
 
     <body>
         <header>
-            <h1 id="logo">charitylist.info</h1>
-            <h2 id="subHeadline">
-                <span>find</span>
-                <img src="your.svg" alt="your">
-                <span>charity</span>
-            </aside>
+            <h1 id="logo">Charity Finder</h1>
             <nav>
                 <ul>
                     <li><a class="scroll" href="#searchResults">Search Results</a></li>
@@ -34,48 +29,55 @@
                     <div id="searchField">
                         <div class="search-pair">
                             <div class="search-pair-description">
+                                <!-- <i>2</i> -->
+                                <h4 class="search-pair-title">1: Choose a category</h4>
+                            </div>
+                            <div id="categoryInput"></div>
+                        </div>
+                        <div class="search-pair">
+                            <div class="search-pair-description">
                                 <!-- <i>1</i> -->
-                                <h4 class="search-pair-title">1: Choose a region</h4>
+                                <h4 class="search-pair-title">2: Choose a region</h4>
                             </div>
                             <div id="regionInput"></div>
                         </div>
                         <div class="search-pair">
                             <div class="search-pair-description">
-                                <!-- <i>2</i> -->
-                                <h4 class="search-pair-title">2: Choose a category</h4>
+                                <!-- <i>3</i> -->
+                                <h4 class="search-pair-title">3: Choose a search term</h4>
                             </div>
-                            <div id="categoryInput"></div>
+                            <div id="searchInput"></div>
                         </div>
                         <button id="go">GO</button>
-                        <!-- <div class="search-pair">
-                            <div class="search-pair-description">
-                                <i>3</i>
-                                <h4 class="search-pair-title">Choose a search term</h4
-                            </div>
-                        </div> -->
                     </div>
                 </article>
-                <div id="hiddenContent">
+                <article id="hiddenContent">
                     <div id="regionPopup"></div>
                     <div id="categoryPopup"></div>
-                </div>
+                </article>
             </section>
 
             <section id="searchResults">
-                <h3>Search Results</h3>
-                <div id="charitiesGrid"></div>
+                <article id="searchResultsContainer">
+                    <h3>Search Results</h3>
+                    <div id="charitiesGrid"></div>
+                </article>
             </section>
 
             <section id="mission">
-                <h3>Mission</h3>
-                <p>This page should serve as an entry point for your research and is meant to provide an unbiased overview over all charities.
-                We try to provide the results in an unbiased way, randomized, no logos, no corrupt rating system etc.
-                The content of the charity should be at the center of attention, not how much money they have or how big their influence is.</p>
+                <article id="missionContainer">
+                    <h3>Mission</h3>
+                    <p>This page should serve as an entry point for your research and is meant to provide an unbiased overview over all charities.
+                    We try to provide the results in an unbiased way, randomized, no logos, no corrupt rating system etc.
+                    The content of the charity should be at the center of attention, not how much money they have or how big their influence is.</p>
+                </article>
             </section>
 
             <section id="disclaimer">
-                <h3>Disclaimer</h3>
-                <p>We cannot guarantee for the pages we link to. Surf at your own risk.</p>
+                <article id="disclaimerContainer">
+                    <h3>Disclaimer</h3>
+                    <p>We cannot guarantee for the pages we link to. Surf at your own risk.</p>
+                </article>
             </section>
         </main>
 

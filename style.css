@@ -22,7 +22,16 @@ body {
     font-weight: bold;
     margin-top: 25px;
     color: #44e073;
-    text-decoration: underline;
+}
+
+header {
+    text-align: center;
+}
+
+article {
+    max-width: 1280px;
+    display: block;
+    margin: 0 auto;
 }
 
 #subHeadline {
@@ -47,11 +56,13 @@ body {
 #searchField {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 #go {
     background: #ffffff;
     outline: unset;
+    flex-grow: 1;
     border: none;
     border-radius: 82px;
     font-size: 23px;
@@ -271,6 +282,7 @@ header, section, footer {
 section#searchResults {
     background-color: #f9f9f9;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 7rem;
 }
 
 footer {
@@ -303,7 +315,7 @@ section#mission, section#disclaimer {
     flex-grow: 1;
 }
 
-section > h3 {
+section h3 {
     font-size: 1.5rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -313,7 +325,7 @@ section > h3 {
     padding: 5px 10px;
 }
 
-section:not(#searchResults) > h3 {
+section:not(#searchResults) h3 {
     margin-bottom: 1rem;
 }
 

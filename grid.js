@@ -32,15 +32,15 @@ $(document).ready(function() {
         loadPanel: {
             enabled: true
         },
-        searchPanel: {
-            highlightCaseSensitive: false,
-            highlightSearchText: true,
-            placeholder: "Search...",
-            searchVisibleColumnsOnly: false,
-            text: "",
-            visible: true,
-            width: "100%"
-        },
+        // searchPanel: {
+        //     highlightCaseSensitive: false,
+        //     highlightSearchText: true,
+        //     placeholder: "Search...",
+        //     searchVisibleColumnsOnly: false,
+        //     text: "",
+        //     visible: true,
+        //     width: "100%"
+        // },
         onContentReady: function(e) {
             if (ready) {
                e.component.searchByText(qs.search);
@@ -51,13 +51,7 @@ $(document).ready(function() {
             window.open("https://" + e.data.link, '_blank');
         },
         columns: [
-        {
-            caption: "Region",
-            dataField: "regions",
-            dataType: "string",
-            filterValues: typeof qs.regions === 'string' ? qs.regions.split(',') : [],
-            width: '200px',
-        },{
+       {
             caption: "Name",
             dataField: "name",
             dataType: "string",
@@ -109,6 +103,13 @@ $(document).ready(function() {
                     return o.name;
                 });
             }
+        },
+        {
+            caption: "Region",
+            dataField: "regions",
+            dataType: "string",
+            filterValues: typeof qs.regions === 'string' ? qs.regions.split(',') : [],
+            width: '200px',
         }],
     }).dxDataGrid('instance');
 });
