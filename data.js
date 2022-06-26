@@ -1,10 +1,11 @@
-// //https://en.wikipedia.org/wiki/List_of_charitable_foundations
-// //https://www.dzi.de/spenderberatung/das-spenden-siegel/liste-aller-spenden-siegel-organisationen-a-z/
-// //https://www.netzwerk-ebd.de/member-category/gemeinnuetzige-organisationen/?set-view-type=fulllist
-// //https://edelmut.org/organisationen/
-// //file:///C:/Users/steph/Downloads/gemeinnuetzige_organisationen.pdf als excel/json anfragen?
-// //https://www.unitedcharity.de/Hilfsorganisationen/Organisationen
-// //https://www.charitynavigator.org/
+//https://en.wikipedia.org/wiki/List_of_charitable_foundations
+//https://www.dzi.de/spenderberatung/das-spenden-siegel/liste-aller-spenden-siegel-organisationen-a-z/
+//https://www.netzwerk-ebd.de/member-category/gemeinnuetzige-organisationen/?set-view-type=fulllist
+//https://edelmut.org/organisationen/
+//file:///C:/Users/steph/Downloads/gemeinnuetzige_organisationen.pdf als excel/json anfragen?
+//https://www.unitedcharity.de/Hilfsorganisationen/Organisationen
+//https://www.charitynavigator.org/
+//https://register-of-charities.charitycommission.gov.uk/charity-search/-/results/page/1/delta/20
 
 var data = [
    {
