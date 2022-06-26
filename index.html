@@ -85,26 +85,26 @@
                 <article>
                     <h3>Get in Touch</h3>
                     <p>I you have any concerns regarding the website please feel free to contact us.</p>
-                    <form method="post" name="contact-form"><input type="hidden" name="form-name" value="contact-form">
-                        <div class="fields">
-                            <div class="field half">
-                                <label for="demo-name">Name</label>
-                                <input type="text" name="demo-name" id="demo-name" value="" placeholder="Your Name">
-                            </div>
-                            <div class="field half">
-                                <label for="demo-email">Email</label>
-                                <input required="" type="email" name="demo-email" id="demo-email" value="" placeholder="your@email.tld">
-                            </div>
-                            <div class="field">
-                                <label for="demo-message">Message</label>
-                                <textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-                            </div>
-                        </div>
-                        <ul class="actions">
-                            <li><input type="submit" value="Send Message" class="primary"></li>
-                            <li><input type="reset" value="Reset"></li>
-                        </ul>
-                    </form>
+                    <form method="post" name="contact-form" data-netlify="true">
+						<div class="fields">
+							<div class="field half">
+								<label for="demo-name">Name</label>
+								<input type="text" name="demo-name" id="demo-name" value="" placeholder="Your Name" />
+							</div>
+							<div class="field half">
+								<label for="demo-email">Email</label>
+								<input required type="email" name="demo-email" id="demo-email" value="" placeholder="your@email.tld" />
+							</div>
+							<div class="field">
+								<label for="demo-message">Message</label>
+								<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+							</div>
+						</div>
+						<ul class="actions">
+							<li><input type="submit" value="Send Message" class="primary" /></li>
+							<li><input type="reset" value="Reset" /></li>
+						</ul>
+					</form>
                 </article>
             </section>
         </main>
