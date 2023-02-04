@@ -1,1 +1,1 @@
-# charitylist.info
+https://charity-finder.net/?regions=Germany
